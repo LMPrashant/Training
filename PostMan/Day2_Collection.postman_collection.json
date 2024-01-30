@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "abb211a7-30c4-4ce8-ad42-88ddb0d6f9ba",
+		"name": "Day2_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32156785",
+		"_collection_link": "https://solar-station-856323.postman.co/workspace/Jan2024~a7be6f81-421f-4cd8-8866-7553170d00c6/collection/32156785-abb211a7-30c4-4ce8-ad42-88ddb0d6f9ba?action=share&source=collection_link&creator=32156785"
+	},
+	"item": [
+		{
+			"name": "Auth_Request",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "postman",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic postman:password",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://postman-echo.com/basic-auth?=",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"basic-auth"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ENV_Demo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page={{page_}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{page_}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Request_Singleuser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate user\",function(){\r",
+							"  var jdata = pm.response.json();\r",
+							"  pm.expect(jdata.data[4].first_name).to.eql(pm.environment.get('fname'))\r",
+							"  pm.expect(jdata.data[4].last_name).to.eql(pm.environment.get('lname'))\r",
+							"  pm.expect(jdata.data[4].email).to.eql(pm.environment.get('email'))\r",
+							"  pm.expect(pm.response.status).to.eql(pm.environment.get('scode'))\r",
+							"  pm.expect(jdata.data[4].id).to.eql(Number(pm.environment.get('id')))\r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
