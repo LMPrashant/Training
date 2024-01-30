@@ -1,0 +1,31 @@
+Stories(User stories) :- To describe something about sprint, Bug, Issues.
+
+Scrum Board : -Backlog(Sprint Backlog,Product Backlog) ,-> Active Sprints.
+
+Issue types:
+1.Bug
+2.Epic
+3.Improvement
+4.New Features
+5.Sub Task
+
+DMT Board:- View of Tickets Workflow of sprint.
+In QA if you reopened the Ticket than u have to assign the work to specific developer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

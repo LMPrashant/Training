@@ -1,0 +1,19 @@
+When to Create Test cases?
+-The sends us the requirments during the data analysis we start the test paln.
+-Once the developer team complete the one sprint During that stage we plan our test cases, resources and data to check the specific function.
+
+Steps:-
+1. understand the user requirements.
+2. Plan the Test senarios.
+3. Make Test cases.
+4.Set up the enviroment & all needed resources.
+5. Excute the test case.
+6. Make Test cases Reports.
+7. Inform to Test Lead.
+8. If any bugs are there then assign the ticket to specific developer.
+
+Process-
+1. Get the details of project from seniors.
+2. understand the all needs of customer.
+3. Get approval on all test cases which you have made.
+4. Execute the test cases & give the feedback of each test caes test lead.

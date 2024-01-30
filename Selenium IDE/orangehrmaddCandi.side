@@ -1,0 +1,17 @@
+{
+  "id": "523c8c90-038d-492c-8123-e4202d49b1a9",
+  "version": "2.0",
+  "name": "orangehrmaddCandi",
+  "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "tests": [],
+  "suites": [{
+    "id": "8e1bfb93-734e-4dc2-b0c9-95cc1353c352",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"],
+  "plugins": []
+}

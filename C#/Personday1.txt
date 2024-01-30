@@ -1,0 +1,43 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List <Person> PersonList = new List<Person>();
+        
+        Person person1 = new person();
+        person1.id = 1;
+        person1.name="Prashant";
+        person1.age = 25;
+        person1.location="sakinaka";
+        
+        Person person2 = new person();
+        person2.id = 2;
+        person2.name="Prash";
+        person2.age = 27;
+        person2.location="saki";
+        
+        PersonList.Add(person1);
+        PersonList.Add(person2);
+        
+        foreach (var item in person){
+            console.writeline(item);
+        }
+        
+    }
+    
+    public class Person{
+        public int ID{ get; set;}
+        public string Name{get; set; }
+        public int Age { get; set; }
+        public string Location { get; set;}
+    }
+    
+    
+    
+}

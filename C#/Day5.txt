@@ -1,0 +1,138 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+
+=======================BASIC Factory Design Model=================
+using System;
+
+interface IInvoice{
+    public void print(){
+        
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+    Console.WriteLine("Enter the Invoice Type");
+    int num = Convert.ToInt32(Console.ReadLine());
+    
+    if(num==1){
+        var invoice = new clasInvoiceWithHeader();
+        invoice.print();
+    }
+    else if(num==2){
+        var invoice = new clasInvoiceWithFooter();
+        invoice.print();
+    }
+  }
+}
+
+public class clasInvoiceWithHeader: IInvoice{
+    public void print(){
+        Console.WriteLine("Header Invoice");
+    }
+}
+
+public class clasInvoiceWithFooter : IInvoice{
+    public void print(){
+       Console.WriteLine("Footer Invoice"); 
+    }
+}
+
+==================Factory Design Implementation====================
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+interface IInvoice{
+    public void print(){
+        
+    }
+}
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+    //Console.WriteLine("Enter the Invoice Type");
+    //int num = Convert.ToInt32(Console.ReadLine());
+    
+    //if(num==1){
+    //    var invoice = new clasInvoiceWithHeader();
+    //    invoice.print();
+    //}
+    //else if(num==2){
+    //    var invoice = new clasInvoiceWithFooter();
+    //    invoice.print();
+    //}
+    
+    while(true){
+        Console.WriteLine("Enter the Invoice Type");
+    int num = Convert.ToInt32(Console.ReadLine());
+    
+    IInvoice invoiceprint = clsFactoryInvice.getInvoice(num);
+    invoiceprint.print();
+    }
+  }
+}
+class clsFactoryInvice
+    {
+        public static IInvoice getInvoice(int invoiceType)
+        {
+            IInvoice result = null;
+            if (invoiceType == 1)
+            {
+                result = new clasInvoiceWithHeader();
+            }
+            else if (invoiceType == 2)
+            {
+               result = new clasInvoiceWithFooter();
+            }
+            return result;
+        }
+    }
+
+public class clasInvoiceWithHeader: IInvoice{
+    public void print(){
+        Console.WriteLine("Header Invoice");
+    }
+}
+
+public class clasInvoiceWithFooter : IInvoice{
+    public void print(){
+       Console.WriteLine("Footer Invoice"); 
+    }
+}
+
+=====================Async Await===================
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+using System.Threading.Tasks;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        RunAsync();
+        Console.WriteLine ("Hello Mono World");
+    }
+    
+    public static async void RunAsync()
+    {
+        var res = await Run();
+        Console.WriteLine(res);
+    }
+    
+    public static async Task<string> Run(){
+        var res = await Task.Run(() =>
+        {
+            return "Hello World";
+        });
+        return res;
+    }
+}
+
+

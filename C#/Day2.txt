@@ -1,0 +1,43 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+public delegate int Del1();
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+       // Console.WriteLine ("Hello Mono World");
+        Console.WriteLine(add(5,3));
+        Console.WriteLine();
+        Console.WriteLine(add(5,3,2));
+        
+        DemoPerson person1 = new DemoChild();
+        person1.DoSomething();
+        
+       
+    }
+    }
+    
+    
+    
+    public static int add(int a, int b, int c){
+        return a+ b + c;
+    }
+    
+    public class DemoPerson{
+        public virtual void DoSomething(){
+            Console.WriteLine("Parent Called");
+        }
+    }
+    
+    public class DemoChild : DemoPerson{
+        public override void DoSomething(){
+            Console.WriteLine("Child Called");
+        }
+    }
+    
+    public Interface IPerson{
+        public 
+    }
+}

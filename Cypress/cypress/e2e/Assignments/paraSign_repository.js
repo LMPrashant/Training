@@ -1,0 +1,45 @@
+export{paraSign}
+class paraSign{
+    enterurl(url){
+        cy.visit(url)
+    }
+    register(){
+        cy.get('#loginPanel > :nth-child(3) > a').click()
+    }
+    enterfname(fname){
+        cy.get('#customer\\.firstName').click().type(fname)
+    }
+    enterlname(lname){
+        cy.get('#customer\\.lastName').click().type(lname)
+    }
+    enterstreet(street){
+        cy.get('#customer\\.address\\.street').click().type(street)
+    }
+    entercity(city){
+        cy.get('#customer\\.address\\.city').click().type(city)
+    }
+    enterstate(state){
+        cy.get('#customer\\.address\\.state').click().type(state)
+    }
+    enterzipcode(zipcode){
+        cy.get('#customer\\.address\\.zipCode').click().type(zipcode)
+    }
+    enterpnum(pnumber){
+        cy.get('#customer\\.phoneNumber').click().type(pnumber)
+    }
+    enterssn(ssn){
+        cy.get('#customer\\.ssn').click().type(ssn)
+    }
+    enteruname(uname){
+        cy.get('#customer\\.username').click().type(uname)
+    }
+    enterpass(password){
+        cy.get('#customer\\.password').click().type(password)
+    }
+    enterupass(upassword){
+        cy.get('#repeatedPassword').click().type(upassword)
+    }
+    clickregister(){
+        cy.get('[colspan="2"] > .button').click();
+    }
+}

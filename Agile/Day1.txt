@@ -1,0 +1,4 @@
+Agile Methodology
+-5 Values
+- 3 Role : Product backlog grooming, Sprint Planning, Daily standup, sprint review, Restrospective
+- 3 Artifacts - Product backlog(backlog Grooming), Sprint Backlog. Sprint planning

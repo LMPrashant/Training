@@ -1,0 +1,101 @@
+1. Please create one class named UserDetails
+it should have - 5 properties
+		 1 static method
+		 3 methods to handle data
+		  Append FirstName and LastName
+Check for validation (Custom - address should not exceeds 100 words
+			check for case correction.)
+
+there will be two constructor including one parameterized to take data.
+
+the age properties should thow exception when the age is above 32.
+create a custom expection named AgeAheadOfBar.
+Please use assumptions wherever necessary.	
+
+===============================================================================
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+
+public class InvalidAgeException : Exception  
+{  
+    public InvalidAgeException(String message)  
+        : base(message)  
+    {  
+  
+    }  
+}  
+
+class UserDetails{
+   public int User_id {get; set; }
+   public string FirstName {get; set;}
+   public string LastName {get; set; }
+   static int user_count = 0;
+   
+   private string address;
+   public string Address {
+       get{
+       return address;
+        }
+   set{
+       if (value.Length < 100){
+           address = value;
+       }
+       else
+       Console.WriteLine("You have exceed the limit please write 100 words only");
+         }
+   }
+   private int age;
+   
+   public int Age {
+       get{
+           return age;
+       } 
+       set{
+        if(value < 0 || value > 32){
+            throw new InvalidAgeException("Sorry, Age must be in range of 0 to 32");
+        }
+        else
+        age = value;
+       }
+       
+   }
+   
+   public void display(){
+       Console.WriteLine(this.User_id);
+       Console.WriteLine(this.FirstName);
+       Console.WriteLine(this.LastName);
+       Console.WriteLine(this.address);
+       Console.WriteLine(this.age);
+       
+   }
+   
+   public UserDetails(int id,string fname,string lname,string add,int _age){
+      // this.User_id = Int32.Parse(id);
+      user_count++;
+      this.User_id = id;
+       this.FirstName = fname;
+       this.LastName = lname;
+       this.Address = add;
+       this.Age = _age;
+      // this.age = Int32.Parse(age);
+   }
+   
+   public static void UserCount(){
+       Console.WriteLine(user_count);
+   }
+   
+   public class HelloWorld
+    {
+    public static void Main(string[] args)
+    {
+        UserDetails user = new UserDetails(1,"Prashant","Karajagi","Uday Nagar, Sakinaka",24);
+         UserDetails user1 = new UserDetails(2,"Geeta","Bhand","THane Nagar, ulhasnagr",24);
+        
+        user.display();
+        UserCount();
+    }
+}
+}

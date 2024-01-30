@@ -1,0 +1,9 @@
+package Day6_2Grups;
+
+import org.testng.annotations.Test;
+
+public class TC001_Grup {
+  @Test
+  public void f() {
+  }
+}

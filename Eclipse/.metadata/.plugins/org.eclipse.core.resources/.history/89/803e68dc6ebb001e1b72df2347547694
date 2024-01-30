@@ -1,0 +1,6 @@
+Feature: LoginHRM
+
+Scenario: Login with OrangeHRM1
+
+	Given STart the browser
+	
