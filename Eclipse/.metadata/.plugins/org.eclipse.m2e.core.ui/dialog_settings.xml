@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Training\Eclipse\Jan2024_SeleniumClass1\src\test\java\CanvaTestCase\NewTest.java"/>
 			<item value="D:\Training\Eclipse\05_JAN2024_Assign\src\test\java\com\cg\eis\exception\EmployeeException.java"/>
 			<item value="D:\Training\Eclipse\JAN2024_JAVA\src\test\java\Day5\Lab_HashLab.java"/>
 			<item value="D:\Training\Eclipse\JAN2024_JAVA"/>
@@ -28,6 +29,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="Jan2024_Appium.Jan2024_Appium"/>
 			<item value="Jan2024_SeleniumClass.Jan2024_SeleniumClass"/>
 			<item value="Junit.Junit"/>
 			<item value="_JAN2024_Assign._JAN2024_Assign"/>
@@ -36,6 +38,7 @@
 			<item value="JAN2024_JAVA.JAN2024_JAVA"/>
 		</list>
 		<list key="groupId">
+			<item value="Jan2024_Appium"/>
 			<item value="Jan2024_SeleniumClass"/>
 			<item value="Junit"/>
 			<item value="05_JAN2024_Assign"/>
@@ -43,6 +46,7 @@
 			<item value="JAN2024_JAVA"/>
 		</list>
 		<list key="artifactId">
+			<item value="Jan2024_Appium"/>
 			<item value="Jan2024_SeleniumClass"/>
 			<item value="Junit"/>
 			<item value="05_JAN2024_Assign"/>
